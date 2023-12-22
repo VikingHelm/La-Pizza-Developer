@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pizza Developer</title>
+    <link rel="stylesheet" href="/src/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="navigationWrapper">
+            <div class="logoWrapper">
+                <span class="stylish">La Pizza</span>
+                <span class="logo">Developer</span>
+            </div>
+            <div class="flex justify-around">
+                <ul class="navigation">
+                    <li class="parent"><a class="link" href="#">Home</a></li>
+                    <li class="parent"><a class="link active" href="#">Menú</a></li>
+                    <li class="parent"><a class="link" href="#">Especiales</a></li>
+                    <li class="parent"><a class="link" href="#">Combos</a></li>
+                    <li class="parent"><a class="link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main class="mainContent">
+        <div class="container select m-8 ">
+            <div class="bar flex justify-center text-center p-8">
+                <h1>Menú</h1>
+            </div>
+            <div class="content flex gap-2">
+                <div class="selectors p-4">
+                    <label for="selectSize" class="text-4xl">Seleccione su pizza: </label>
+                    <div class="selectSize p-4">
+                        <label for="pizzaSize" class="text-2xl">Tamaño: </label>
+                        <select class="pizzaSize" id="pizzaSize">
+                            <option value="">Seleccione</option>
+                            <option value="Pequeña">Pequeña</option>
+                            <option value="Mediana">Mediana</option>
+                            <option value="Grande">Grande</option>
+                        </select>
+                    </div>
+                    <div class="selectIngredients p-4">
+                        <label for="pizzaTypeLabel" class="text-2xl">Tipo: </label>
+                        <select class="pizzaType" id="pizzaType" required>
+                            <option value="">Seleccione</option>
+                            <option value="Sencilla">Sencilla (Salsa y Queso Mozzarella)</option>
+                            <option value="Ingredientes">Sencilla + Extra Ingredientes</option>
+                        </select>
+                    </div>
+
+
+                    <div class="pizzaExtraIngredients hidden gap-4">
+                        <div class="flex flex-col p-4 text-lg">
+                            <label>
+                                <input type="checkbox" name="extraTopping" value="extra"> Champiñones (+$1.00)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="extraTopping" value="extra"> Aceitunas (+$1.00)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="extraTopping" value="extra"> Anchoas (+$1.00)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="extraTopping" value="extra"> Salchichón (+$1.00)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="extraTopping" value="extra"> Pepperoni (+$1.00)
+                            </label>
+                        </div>
+
+                    </div>
+                    <br>
+                    <br>
+                    <div class="btnBox flex justify-center pb-8">
+                        <button class="btn"">Ordenar</button>
+                    </div>
+                </div>
+                <div class="showFinalPrice content-center p-8">
+                    <p class="showFinalPriceText font-bold text-4xl text-center justify-center"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        <p class="footer">Viking Industries &#169</p>
+    </footer>
+    
+
+
+
+
+
+
+
+
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
